@@ -10,6 +10,8 @@
     "test": "tsx --test src/offlineGame.test.ts"
   },
   "dependencies": {
+    "pinyin-pro": "^3.29.5",
+    "pinyin-to-zhuyin": "^1.1.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

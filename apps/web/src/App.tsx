@@ -20,6 +20,7 @@ import {
   type Phase,
   type Role,
 } from "./offlineGame";
+import { toZhuyin } from "./zhuyin";
 
 const phaseLabels: Record<Phase, string> = {
   setup: "設定遊戲",
@@ -293,7 +294,12 @@ function RevealPhase({ game, onReveal, onFinish }: { game: OfflineGameState; onR
           <p className="secret-role-label">{role === "spy" ? "你是間諜" : "你是平民"}</p>
           <div className="secret-role-icon">{role === "spy" ? "◉" : "✦"}</div>
           <p className="word-caption">你的詞語</p>
-          <strong className="secret-word">{game.words[player.id]}</strong>
+          <div className="secret-word-line">
+            <strong className="secret-word">{game.words[player.id]}</strong>
+            <span className="secret-zhuyin" aria-label={`注音：${toZhuyin(game.words[player.id])}`}>
+              （{toZhuyin(game.words[player.id])}）
+            </span>
+          </div>
           <p className="secret-warning">記住你的詞語，不要讓其他人看到。</p>
           <button className="primary-button big-button" onClick={onFinish}>我記住了，隱藏並交給下一位</button>
         </div>

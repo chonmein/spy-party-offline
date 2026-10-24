@@ -89,7 +89,9 @@ input:focus { border-color: #f5c45d; box-shadow: 0 0 0 .2rem rgba(245, 196, 93, 
 .spy-secret .secret-role-label { color: #ffac83; }
 .secret-role-icon { color: #f5c45d; font-size: 2.8rem; margin: 1rem 0; }
 .word-caption { color: #a9c1bf; font-size: .7rem; letter-spacing: .2em; margin-bottom: .3rem; }
-.secret-word { display: block; color: #f4f6e9; font-size: clamp(2.2rem, 10vw, 3.4rem); letter-spacing: .05em; }
+.secret-word-line { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: .35rem .6rem; }
+.secret-word { color: #f4f6e9; font-size: clamp(2.2rem, 10vw, 3.4rem); letter-spacing: .05em; }
+.secret-zhuyin { color: #b8d8d1; font-size: clamp(.9rem, 3vw, 1.15rem); letter-spacing: .05em; line-height: 1.7; }
 .secret-warning { color: #b1c4be; font-size: .78rem; margin: 1rem 0 0; }
 .tip-grid { display: grid; gap: .5rem; margin: 1.5rem 0; }
 .tip-grid span { color: #abc7be; border: 1px solid #294e58; border-radius: .7rem; padding: .65rem; font-size: .76rem; }

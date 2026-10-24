@@ -32,6 +32,12 @@ importers:
 
   apps/web:
     dependencies:
+      pinyin-pro:
+        specifier: ^3.29.5
+        version: 3.29.5
+      pinyin-to-zhuyin:
+        specifier: ^1.1.0
+        version: 1.1.0
       react:
         specifier: ^19.1.1
         version: 19.3.1
@@ -593,6 +599,17 @@ packages:
     resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
     engines: {node: '>=12'}
 
+  pinyin-pro@3.29.5:
+    resolution: {integrity: sha512-Fk5YoRmtdHqJWqAuzYVG/NzvzeCbaG+ZEwbY6Nbps3QAIrvQQEtcm49frcyCM8i2b5najnzPDtYqrHRYTTiuwQ==}
+
+  pinyin-to-zhuyin@1.1.0:
+    resolution: {integrity: sha512-tGMv4J9bE6/Mrxn1q5HHfe4Jsy/fkA/vxWlXzat/WCVbfqATTuS8pnY/lKlErN9iBR11u2EXO5KXt+uNqgKLTQ==}
+    hasBin: true
+
+  pinyin-tone-tool@1.0.5:
+    resolution: {integrity: sha512-1tKAwjYvpvVJVr7Sb7oCW+Far9EqNtE7mG3mFFztPyGwJs7jZiWpfj62aA4MtY8P5iLcJ2G9975Y3Pkwygi0ug==}
+    hasBin: true
+
   postcss@8.5.31:
     resolution: {integrity: sha512-YUbWYCgErwnMAVkjUnYa+KlMBzGpHwiIt/DE7f0G33AuX2LH9UcTk6KgWxd3zRU+pN3u/C+Xl3EnMLM4Hea7Sg==}
     engines: {node: ^10 || ^12 || >=14}
@@ -1127,6 +1144,14 @@ snapshots:
   picocolors@1.1.1: {}
 
   picomatch@4.0.7: {}
+
+  pinyin-pro@3.29.5: {}
+
+  pinyin-to-zhuyin@1.1.0:
+    dependencies:
+      pinyin-tone-tool: 1.0.5
+
+  pinyin-tone-tool@1.0.5: {}
 
   postcss@8.5.31:
     dependencies:

@@ -11,12 +11,18 @@ import {
   submitVote,
   WORD_PAIRS,
 } from "./offlineGame";
+import { toZhuyin } from "./zhuyin";
 
 const names = ["甲", "乙", "丙", "丁"];
 
 test("內建題庫包含 10,000 組不重複配對", () => {
   assert.equal(WORD_PAIRS.length, 10_000);
   assert.equal(new Set(WORD_PAIRS.map((pair) => `${pair.civilian}\u0000${pair.spy}`)).size, 10_000);
+});
+
+test("題目可以產生繁體中文注音", () => {
+  assert.equal(toZhuyin("咖啡"), "ㄎㄚ ㄈㄟ");
+  assert.equal(toZhuyin("早餐桌上：咖啡"), "ㄗㄠˇ ㄘㄢ ㄓㄨㄛ ㄕㄤˋ ： ㄎㄚ ㄈㄟ");
 });
 
 function revealEveryone() {
