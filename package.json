@@ -1,0 +1,15 @@
+{
+  "name": "spy-party-game",
+  "private": true,
+  "packageManager": "pnpm@10.15.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @spy/web dev",
+    "dev:server": "pnpm --filter @spy/server dev",
+    "build": "pnpm --filter @spy/web build",
+    "build:all": "pnpm -r build",
+    "test": "pnpm --filter @spy/web test",
+    "test:server": "pnpm --filter @spy/server test",
+    "smoke": "pnpm --filter @spy/server smoke",
+    "package:itch": "powershell -ExecutionPolicy Bypass -File ./scripts/package-itch-offline.ps1"
+  }
+}

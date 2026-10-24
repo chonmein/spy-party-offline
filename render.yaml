@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: spy-party-server
+    runtime: node
+    plan: free
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @spy/server build
+    startCommand: pnpm --filter @spy/server start
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false
