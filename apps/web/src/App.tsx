@@ -15,6 +15,7 @@ import {
   submitSpyGuess,
   submitVote,
   topVoteIds,
+  WORD_PAIRS,
   type OfflineGameState,
   type Phase,
   type Role,
@@ -176,7 +177,7 @@ function SetupScreen({
         <p className="eyebrow">PASS-AND-PLAY / NO SERVER</p>
         <h1>誰是<br /><em>間諜？</em></h1>
         <p className="hero-description">一台裝置輪流傳遞，每個人私下查看自己的詞語，再靠描述與直覺把間諜揪出來。</p>
-        <div className="feature-strip"><span>不需網路</span><span>4–12 人</span><span>10–20 分鐘</span></div>
+        <div className="feature-strip"><span>不需網路</span><span>4–12 人</span><span>{WORD_PAIRS.length.toLocaleString()} 組題目</span></div>
       </section>
 
       <section className="panel setup-panel">

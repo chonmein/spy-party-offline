@@ -9,9 +9,15 @@ import {
   resolveVote,
   submitSpyGuess,
   submitVote,
+  WORD_PAIRS,
 } from "./offlineGame";
 
 const names = ["甲", "乙", "丙", "丁"];
+
+test("內建題庫包含 10,000 組不重複配對", () => {
+  assert.equal(WORD_PAIRS.length, 10_000);
+  assert.equal(new Set(WORD_PAIRS.map((pair) => `${pair.civilian}\u0000${pair.spy}`)).size, 10_000);
+});
 
 function revealEveryone() {
   let state = createGame(names, () => 0);

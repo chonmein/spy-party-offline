@@ -40,32 +40,9 @@ export type OfflineGameState = {
   result: GameResult | null;
 };
 
-export const WORD_PAIRS: WordPair[] = [
-  { civilian: "咖啡", spy: "奶茶" },
-  { civilian: "火車", spy: "捷運" },
-  { civilian: "海邊", spy: "湖邊" },
-  { civilian: "雨傘", spy: "雨衣" },
-  { civilian: "蛋糕", spy: "甜甜圈" },
-  { civilian: "書店", spy: "圖書館" },
-  { civilian: "狗狗", spy: "貓咪" },
-  { civilian: "太陽", spy: "月亮" },
-  { civilian: "夏天", spy: "春天" },
-  { civilian: "山", spy: "森林" },
-  { civilian: "冰箱", spy: "微波爐" },
-  { civilian: "電影", spy: "影集" },
-  { civilian: "足球", spy: "籃球" },
-  { civilian: "醫院", spy: "診所" },
-  { civilian: "早餐", spy: "宵夜" },
-  { civilian: "公車", spy: "計程車" },
-  { civilian: "帽子", spy: "圍巾" },
-  { civilian: "相機", spy: "手機" },
-  { civilian: "蛋", spy: "豆腐" },
-  { civilian: "海豚", spy: "鯨魚" },
-  { civilian: "生日", spy: "畢業" },
-  { civilian: "電影院", spy: "遊樂園" },
-  { civilian: "披薩", spy: "漢堡" },
-  { civilian: "游泳", spy: "跑步" },
-];
+import { WORD_PAIRS } from "./wordPairs";
+
+export { WORD_PAIRS } from "./wordPairs";
 
 export function createEmptyGame(): OfflineGameState {
   return {
